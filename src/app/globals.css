@@ -8,3 +8,7 @@ html,body{
   overflow-y: auto;
 
 }
+
+a:visited{
+  color:inherit
+}
