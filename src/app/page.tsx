@@ -1,3 +1,4 @@
+import CarouselPosts from '@/components/CarouselPosts';
 import FeaturedPosts from '@/components/FeaturedPosts';
 
 import Profile from '@/components/Profile';
@@ -11,6 +12,7 @@ export default function Home() {
     <section className="bg-gray-500">
       <Profile/>
       <FeaturedPosts/>
+      <CarouselPosts/>
     </section>
   );
  
