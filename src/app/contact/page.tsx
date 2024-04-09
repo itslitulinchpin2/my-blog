@@ -1,4 +1,4 @@
-import ContactForm from '@/components/ContactForm'
+import ContactForm from '@/app/components/ContactForm'
 import React from 'react'
 import { AiFillGithub } from 'react-icons/ai'
 export default function page() {

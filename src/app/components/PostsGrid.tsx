@@ -1,5 +1,5 @@
 import React from 'react'
-import { Post } from '@/services/posts'
+import { Post } from '@/app/services/posts'
 import PostCard from './PostCard'
 export default function PostsGrid({posts} : {posts: Post[]}) {
   return (

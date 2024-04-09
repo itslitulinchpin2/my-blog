@@ -3,6 +3,7 @@ import React, { ChangeEvent, FormEvent } from 'react'
 import { useState } from 'react';
 import { BannerData } from './Banner';
 import Banner from './Banner';
+import { sendContactEmail } from '@/app/services/contact';
 export default function ContactForm() {
    
 
@@ -11,7 +12,12 @@ export default function ContactForm() {
         subject:string;
         message:string;
     }
-    const [form,setForm] = useState<Form>({from:'',subject:'',message:''});
+    const DEFAULT_DATA = {
+        from:'',
+        subject:'',
+        message:''
+    }
+    const [form,setForm] = useState<Form>(DEFAULT_DATA);
 
     const onChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>{
         const {name,value} = e.target;
@@ -21,21 +27,33 @@ export default function ContactForm() {
 
     const submitHandler = (e: FormEvent<HTMLFormElement>)=>{
         e.preventDefault();
-        console.log(form);
-        setBanner({message:'전송되었습니다', state:'success'})
-        setTimeout(()=>{
-            setBanner(null);
-        },3000)
+        sendContactEmail(form)
+        .then(()=>{
+            
+            setBanner({message:'전송되었습니다', state:'success'})
+            setForm(DEFAULT_DATA);
+        })
+        .catch(()=>{
+            setBanner({message:'전송 실패!', state:'error'})
+        })
+        .finally(()=>{
+            setTimeout(()=>{
+                setBanner(null);
+            },3000)
+        })
+        
+        
+        
     }
   return (
     <section className='w-fill max-w-md'>
     {banner && <Banner banner={banner}/> }
     <form onSubmit={submitHandler} className='w-full max-w-md flex flex-col gap-2 my-4 p-4 bg-slate-700 rounded-xl text-white'>
     <label htmlFor='from' className='font-semibold'>your email</label>
-    <input type="email" placeholder='your name' name="from" onChange={onChange} id="from" required autoFocus value={form.from} />
+    <input className='text-black' type="email" placeholder='your name' name="from" onChange={onChange} id="from" required autoFocus value={form.from} />
 
     <label className='font-semibold' htmlFor='subject'>title</label>
-    <input type="text" placeholder='your name' name="subject" onChange={onChange} id="subject" required  value={form.subject} />
+    <input className='text-black' type="text" placeholder='your name' name="subject" onChange={onChange} id="subject" required  value={form.subject} />
 
     <label  className='font-semibold' htmlFor='message'>your message</label>
     <textarea className= 'text-black' rows={10}  placeholder='your message' name="message" onChange={onChange} id="message" required  value={form.message} />

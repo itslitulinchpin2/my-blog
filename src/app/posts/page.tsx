@@ -1,8 +1,8 @@
 
-import PagesFilter from '@/components/PagesFilter';
-import { getAllPosts } from '@/services/posts'
+import PagesFilter from '@/app/components/PagesFilter';
+import { getAllPosts } from '@/app/services/posts'
 import React from 'react'
-import { Post } from '@/services/posts';
+import { Post } from '@/app/services/posts';
 
 export default async function page() {
   const posts : Post[] = await getAllPosts();

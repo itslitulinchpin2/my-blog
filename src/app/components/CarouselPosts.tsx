@@ -1,4 +1,4 @@
-import { getAllPosts, getNonFeaturedPosts } from '@/services/posts'
+import { getAllPosts, getNonFeaturedPosts } from '@/app/services/posts'
 import React from 'react'
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";

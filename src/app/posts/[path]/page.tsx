@@ -1,10 +1,10 @@
 
 
-import { getAllPosts, getPostMd} from '@/services/posts';
+import { getAllPosts, getPostMd} from '@/app/services/posts';
 import React from 'react'
 import Image from 'next/image';
-import PostContent from '@/components/PostContent';
-import AdjacentPostCard from '@/components/AdjacentPostCard';
+import PostContent from '@/app/components/PostContent';
+import AdjacentPostCard from '@/app/components/AdjacentPostCard';
 
 
 export async function generateStaticParams() {

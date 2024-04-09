@@ -1,7 +1,7 @@
-import CarouselPosts from '@/components/CarouselPosts';
-import FeaturedPosts from '@/components/FeaturedPosts';
+import CarouselPosts from '@/app/components/CarouselPosts';
+import FeaturedPosts from '@/app/components/FeaturedPosts';
 
-import Profile from '@/components/Profile';
+import Profile from '@/app/components/Profile';
 import Image from "next/image";
 import Link from 'next/link';
 export default function Home() {

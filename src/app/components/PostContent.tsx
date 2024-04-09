@@ -2,8 +2,8 @@ import React from 'react'
 import { SlCalender } from "react-icons/sl";
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { dark } from 'react-syntax-highlighter/dist/esm/styles/prism';
-import MarkdownViewer from '@/components/MarkdownViewer';
-import { PostData } from '@/services/posts';
+import MarkdownViewer from '@/app/components/MarkdownViewer';
+import { PostData } from '@/app/services/posts';
 
 export default function PostContent({post}:{post:PostData}) {
     const {title,description,date,content} =  post;

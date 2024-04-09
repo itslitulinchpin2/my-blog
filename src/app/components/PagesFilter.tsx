@@ -1,9 +1,9 @@
 'use client'
 import React from 'react'
 import { useState } from 'react';
-import { getAllPosts } from '@/services/posts';
+import { getAllPosts } from '@/app/services/posts';
 import PostCard from './PostCard';
-import { Post } from '@/services/posts';
+import { Post } from '@/app/services/posts';
 import PostsGrid from './PostsGrid';
 import Categories from './Categories';
 

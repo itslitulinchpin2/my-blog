@@ -1,4 +1,4 @@
-import { Post } from '@/services/posts'
+import { Post } from '@/app/services/posts'
 import Link from 'next/link'
 import React from 'react'
 import Image from 'next/image'
