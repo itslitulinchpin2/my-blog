@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 import Link from 'next/link'
-import ProfileImage from '../../public/myProfile.jpg'
+import ProfileImage from './myProfile.jpg'
 export default function Profile() {
   return (
     <section className="text-center">

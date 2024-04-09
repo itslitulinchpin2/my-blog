@@ -8,7 +8,6 @@ const bodySchema = yup.object().shape({
 
 export async function POST(request:Request){
 
-
     const body = await request.json();
    
     if(!bodySchema.isValidSync(body)){
@@ -17,8 +16,6 @@ export async function POST(request:Request){
         {status: 500});
         
     }
-
-        const {from,subject,message} = body;
 
         return sendEmail(body)
         .then(()=>new Response(JSON.stringify(

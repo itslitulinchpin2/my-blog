@@ -1,6 +1,11 @@
 import ContactForm from '@/app/components/ContactForm'
 import React from 'react'
 import { AiFillGithub } from 'react-icons/ai'
+import { Metadata } from 'next'
+export const metadata:Metadata = {
+  title:'Contact me',
+  description:'Send an email to me'
+}
 export default function page() {
 
   return (

@@ -1,6 +1,15 @@
 import React from 'react'
 import Profile from '@/app/components/Profile'
+import { Metadata } from 'next'
+export const metadata:Metadata = {
+  title:'About me',
+  description:'Let me introduce myself'
+}
+
+
 export default function page() {
+
+
   return (
     <>
     <Profile></Profile>
