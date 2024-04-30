@@ -24,7 +24,7 @@ export async function sendEmail({from, subject, message}:EmailData){
         <h1>${subject}</h1>
         <div>${message}</div>
         <br/>
-        <p>보낸사람: ${from}</p>`
+        <p>Who sent: ${from}</p>`
 
     }
     return transporter.sendMail(mailData);
