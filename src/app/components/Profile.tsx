@@ -4,7 +4,7 @@ import Link from 'next/link'
 export default function Profile() {
   return (
     <section className="text-center">
-      <Image priority className="mx-auto rounded-full" alt="profilePic" src="/myProfile.jpg" width={220} height={300} ></Image>
+      <Image className="mx-auto rounded-full" alt="profilePic.." src="/images/myProfile.jpg" width={220} height={290} ></Image>
       <h2 className='text-3xl font-bold mt-2'>{"Hi, I'm Seungmin"}</h2>
       <h3 className='text-xl font-semibold'>Dreaming full-stack engineer</h3>
       <p>This is my blog</p>
