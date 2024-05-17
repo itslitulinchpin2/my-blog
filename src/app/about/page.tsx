@@ -1,6 +1,7 @@
 import React from 'react'
 import Profile from '@/app/components/Profile'
 import { Metadata } from 'next'
+import WeatherCard from '../components/WeatherCard'
 export const metadata:Metadata = {
   title:'About me',
   description:'Let me introduce myself'
@@ -9,6 +10,7 @@ export const metadata:Metadata = {
 
 export default function page() {
 
+  
 
   return (
     <>
@@ -22,6 +24,7 @@ export default function page() {
       <p>Node,React, Next, Git, MySQL, MongoDB </p>
 
     </section>
+    <WeatherCard/>
     </>
   )
 }
